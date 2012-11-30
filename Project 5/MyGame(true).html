@@ -9,17 +9,17 @@
     <title>Follow the Creed, Brother</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta name="author"             content="Travis G. Kovacs"/>
-    <script type="text/JavaScript" src="location.js"></script>
+    <script type="text/JavaScript" src="locationscript.js"></script>
     <script type="text/JavaScript" src="movement.js"></script>
     <script type="text/JavaScript" src="inventory.js"></script>
     <style>
-      body {background-image:url(http://www.artmoth.com/images/content/backgrounds/13-1284418227-bg-assassins-creed-2-logo.jpg)
+      body {background-image:url(http://static.desktopnexus.com/thumbnails/680294-bigthumbnail.jpg)
       }
       .ezio {color:white; font-weight:bold; font-size:65px;}
       .altair {color:white; font-weight:bold; font-size:20px;}
     </style>
 	</head>
-  <body onload= "init()"> 
+  <body onload= "init();"> 
   <center>
     <p class="ezio"> Welcome to the Brotherhood of Assassins
     </p>
@@ -37,6 +37,10 @@
            value="Go West"
            id="westbutton"
            onclick="move_west();">
+    <input type="button"
+           value="Take"
+           id=takebutton"
+           onclick="takeItem();">
     <input type="button"
            value="Go East"
            id="eastbutton"
@@ -63,12 +67,12 @@
     <input type= "button" 
             value= "Click me for Help"  
             onclick= "Btn_help_click();">
-    <p class="altair">Here is your Score!</p>
+    <p class="altair">Here is your Score!
     <textarea rows="1" cols="3" id="taScore"> 0
     </textarea>
-    <p class="altair">You've taken this many Moves!</p>
+    You've taken this many Moves!
     <textarea rows="1" cols="3" id="taMoves"> 0
-    </textarea>
+    </textarea></p>
     <br>
     <br>
     <input type="button"
