@@ -8,50 +8,17 @@ var playerHasWD40 = false;
   
   function displayInventory() {
     var msg = "Inventory: ";
-    if (playerHasSword) {
+    if (playerHasSword===true) {
       updateText(Item[0].name);
-    } else 
-    if (playerHasSelfConfidence) {
+    } 
+    if (playerHasSelfConfidence===true) {
       updateText(Item[1].name);
-    } else
-    if (playerHasShortBlade) {
+    }
+    if (playerHasShortBlade===true) {
       updateText(Item[2].name);
-    } else
-    if (playerHasWD40) {
+    }
+    if (playerHasWD40===true) {
       updateText(Item[3].name);
-    }
-    if (playerHasSword && playerHasSelfConfidence) {
-      updateText(Item[0].name + ", " + Item[1].name);
-    }
-    if (playerHasSword && playerHasShortBlade) {
-      updateText(Item[0].name + ", " + Item[2].name);
-    }
-    if (playerHasSword && playerHasWD40) {
-      updateText(Item[0].name + ", " + Item[3].name);
-    }
-    if (playerHasSelfConfidence && playerHasShortBlade) {
-      updateText(Item[1].name + ", " + Item[2].name);
-    }
-    if (playerHasSelfConfidence && playerHasWD40) {
-      updateText(Item[1].name + ", " + Item[3].name);
-    }
-    if (playerHasShortBlade && playerHasWD40) {
-      updateText(Item[2].name + ", " + Item[3].name);
-    }
-    if (playerHasSword && playerHasSelfConfidence && playerHasShortBlade) {
-      updateText(Item[0].name + ", " + Item[1].name + ", " + Item[2].name);
-    }
-    if (playerHasSword && playerHasSelfConfidence && playerHasWD40) {
-      updateText(Item[0].name + ", " + Item[1].name + ", " + Item[3].name);
-    }
-    if (playerHasSword && playerHasShortBlade && playerHasWD40) {
-      updateText(Item[0].name + ", " + Item[2].name + ", " + Item[3].name);
-    }
-    if (playerHasSelfConfidence && playerHasShortBlade && playerHasWD40) {
-      updateText(Item[1].name + ", " + Item[2].name + ", " + Item[3].name);
-    }
-    if (playerHasSword && playerHasSelfConfidence && playerHasShortBlade && playerHasWD40) {
-      updateText(Item[0].name + ", " + Item[1].name + ", " + Item[2].name + ", " + Item[3].name);
     }
   }
     

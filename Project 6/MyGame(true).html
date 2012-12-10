@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- Travis G. Kovacs
+	Introduction to Programming
+	7 November 2012
+	Project 4 - Game Version 0.6 -->
+	
+    <title>Follow the Creed, Brother</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="author"             content="Travis G. Kovacs"/>
+    <script type="text/JavaScript" src="locationscript.js"></script>
+    <script type="text/JavaScript" src="movement.js"></script>
+    <script type="text/JavaScript" src="inventory.js"></script>
+    <style>
+      body {background-image:url(http://static.desktopnexus.com/thumbnails/680294-bigthumbnail.jpg)
+      }
+      .ezio {color:white; font-weight:bold; font-size:65px;}
+      .altair {color:white; font-weight:bold; font-size:20px;}
+    </style>
+	</head>
+  <body onload= "init();"> 
+  <center>
+    <p class="ezio"> Welcome to the Brotherhood of Assassins
+    </p>
+    <img src="map.png" width="300" height="200" alt="map.png">
+    <textarea id= "taGame" rows="12" cols="60">
+    </textarea>
+    <br>
+    <br>
+    <input type="button"
+           value="Go North"
+           id="northbutton"
+           onclick="move(NORTH);">
+    <br>
+    <input type="button"
+           value="Go West"
+           id="westbutton"
+           onclick="move(WEST);">
+    <input type="button"
+           value="Take"
+           id=takebutton"
+           onclick="takeItem();">
+    <input type="button"
+           value="Go East"
+           id="eastbutton"
+           onclick="move(EAST);">
+    <br>
+    <input type="button"
+           value="Go South"
+           id="southbutton"
+           onclick="move(SOUTH);">
+    <br>
+    <br>
+    <input type="button"
+           id="enterButton"
+           value="Enter Command!"
+           onclick="btn_go_click();">
+    
+    <input type="text"  
+           onKeyDown= "if (event.keyCode == 13) document.getElementById('enterButton').click()"
+           id="txtInput">
+    <br>
+    <input type= "button" 
+            value= "Inventory"  
+            onclick= "Btn_inventory_click();">
+    <input type= "button" 
+            value= "Click me for Help"  
+            onclick= "Btn_help_click();">
+    <p class="altair">Here is your Score!
+    <textarea rows="1" cols="3" id="taScore"> 0
+    </textarea>
+    You've taken this many Moves!
+    <textarea rows="1" cols="3" id="taMoves"> 0
+    </textarea>
+    <br>
+    You are Here!
+    <textarea rows="1" cols="20" id="taLocation">
+    </textarea></p>
+    <br>
+    <br>
+    <input type="button"
+           value="Click Here if you did not enjoy this short game."
+           onclick="parent.location='http://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+    <br>
+    <br>
+    <a href="mailto:Travis.Kovacs1@marist.edu"> E-mail me if you get stuck!
+    </center>
+  </body>
+</html>
