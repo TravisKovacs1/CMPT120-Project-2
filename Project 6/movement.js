@@ -78,25 +78,25 @@
           case "N":
           case "north":
           case "North":
-          move(north);
+          move(NORTH);
           break;
           case "s":
           case "S":
           case "south":
           case "South":
-          move(south);
+          move(SOUTH);
           break;
           case "e":
           case "E":
           case "east":
           case "East":
-          move(east);
+          move(EAST);
           break;
           case "w":
           case "W":
           case "west":
           case "West":
-          move(west);
+          move(WEST);
           break;
           case "take":
           case "Take":
